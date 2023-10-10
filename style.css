@@ -1,0 +1,172 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'left aside';
+    gap: 15px;
+}
+
+.left_content {
+    grid-area: left;
+    display: grid;
+    padding: 50px 100px;
+}
+
+aside {
+    grid-area: aside;
+}
+
+
+/* START NAV */
+li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+li {
+    font-size: 21px;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: flex-start;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #5b5959;
+    font-weight: bold;
+    position: relative;
+    padding: 0 10px;
+    letter-spacing: 1px;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    background-color: #ff6a00;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: black;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+.icon {
+    margin-left: 20px;
+}
+
+.icon i {
+    padding: 10px;
+}
+
+/* END NAV */
+
+/* START CONTENT MAIN */
+
+.content_main h1 {
+    font-size: 55px;
+    font-weight: 500;
+}
+
+.content_main p {
+    font-size: 22px;
+    padding: 20px 0;
+    color: #aca5a5;
+}
+
+button {
+    color: white;
+    width: 150px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    box-shadow: 0 15px 7px 0 rgba(13, 255, 170, 0.142);
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(128, 251, 204);
+}
+
+/* END CONTENT MAIN */
+
+/* START VIEW CARD */
+.card_content {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.mr {
+    margin-right: 25px;
+}
+
+.mr p {
+    margin: 15px 0;
+    color: #aca5a5;
+}
+
+.card_element {
+    position: relative;
+}
+
+.card_element::before {
+    content: "";
+    position: absolute;
+    background-color: #817c78;
+    height: 5px;
+    width: 100%;
+    left: 0;
+    top: -15px;
+    transition: 0.3s ease;
+}
+
+
+.card_element::after {
+    content: "";
+    position: absolute;
+    background-color: #ff6a00;
+    height: 5px;
+    width: 0;
+    left: 0;
+    top: -15px;
+    transition: 0.3s ease;
+}
+
+.card_element:focus:after {
+    width: 100%;
+}
+
+.card_element:active:after {
+    width: 100%;
+}
+
+
+/* START ASIDE */
+
+aside img {
+    width: 450px;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* END ASIDE */
